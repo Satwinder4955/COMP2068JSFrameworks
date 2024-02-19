@@ -1,8 +1,7 @@
-// Importing the prompt npm package
-const prompt = require('prompt');
+const readline = require('readline');
 
 // Function to generate computer's selection
-function generateComputerSelection() {
+function computerSelect() {
     const randomNumber = Math.random();
     if (randomNumber < 0.34) {
         return "PAPER";
@@ -14,7 +13,7 @@ function generateComputerSelection() {
 }
 
 // Function to determine the winner
-function determineWinner(userSelection, computerSelection) {
+function Winner(userSelection, computerSelection) {
     if (userSelection === computerSelection) {
         return "It's a tie";
     } else if (
@@ -28,23 +27,22 @@ function determineWinner(userSelection, computerSelection) {
     }
 }
 
+// Creating readline interface
+const read = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
 // Prompting the user for input
-prompt.start();
-prompt.get(['userSelection'], function (err, result) {
-    if (err) { return onErr(err); }
-    
-    const userSelection = result.userSelection.toUpperCase(); // Converting user input to uppercase
-    const computerSelection = generateComputerSelection();
+read.question('Enter your selection (ROCK, PAPER, or SCISSORS): ', userSelection => {
+    const userSelection = userSelection.toUpperCase(); // Converting user input to uppercase
+    const computerSelection = computerSelect();
     
     console.log("User Selection:", userSelection);
     console.log("Computer Selection:", computerSelection);
     
-    const outcome = determineWinner(userSelection, computerSelection);
+    const outcome = Winner(userSelection, computerSelection);
     console.log("Outcome:", outcome);
+    
+    read.close();
 });
-
-// Error handler function
-function onErr(err) {
-    console.error(err);
-    return 1;
-}
