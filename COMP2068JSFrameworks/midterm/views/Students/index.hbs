@@ -1,0 +1,28 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>StudentNumber</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>EmailAddress</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% students.forEach(student => { %>
+      <tr>
+        <td><%= student.StudentNumber %></td>
+        <td><%= student.FirstName %></td>
+        <td><%= student.LastName %></td>
+        <td><%= student.EmailAddress %></td>
+        <td>
+          <a href="/students/edit/<%= student._id %>" class="btn btn-primary">Edit</a>
+          <form action="/students/<%= student._id %>" method="POST" style="display: inline;">
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+        </td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
+<a href="/students/add" class="btn btn-success">Add Student</a>
