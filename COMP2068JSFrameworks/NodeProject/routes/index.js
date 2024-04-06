@@ -50,7 +50,7 @@ router.post("/register", function (req, res, next) {
                 });
             } else {
                 req.login(newUser, function (err) {
-                    res.redirect("/products");
+                    res.redirect("/login");
                 });
             }
         }
