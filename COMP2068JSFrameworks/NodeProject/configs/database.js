@@ -1,5 +1,5 @@
-const dbconfig = {
-    MongoDB: 'mongodb+srv://sprayntbhupender:OFOb11suX20LFIy9@cluster0.aio0t97.mongodb.net/'
+const config = {
+    MongoDB: 'mongodb+srv://user4512:comp2068@cluster0.fgk9ofi.mongodb.net/NodeProject'
 }
 
-module.exports = dbconfig;
+module.exports = config;

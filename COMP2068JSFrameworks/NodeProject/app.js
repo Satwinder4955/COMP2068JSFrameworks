@@ -51,10 +51,10 @@ passport.deserializeUser(User.deserializeUser());
 app.use("/", indexRouter);
 app.use("/products", productsRouter);
 
-// Connect to the Databse
+// Connect to the Database
 mongoose
 .connect(dbConfig.MongoDB)
-.then(() => console.log("Databse connected successfully!"));
+.then(() => console.log("Database connected successfully!"));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
