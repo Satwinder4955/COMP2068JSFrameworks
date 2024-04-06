@@ -3,10 +3,10 @@
         <form class="form-signin" method="post">
             <h1 class="h3 mb-3 font-weight-normal">{{title}}</h1>
             <label for="inputTitle" class="sr-only">Title</label>
-            <input class="form-control" name="name" id="name" required  placeholder="Name*"/>
-            <input class="form-control" name="number" id="name" required  placeholder="Number*"/>
-            <input class="form-control" name="price" id="name" required  placeholder="Price*"/>
-            <input class="form-control" name="brand" id="name" required  placeholder="Brand*"/>
+            <input class="form-control" name="name" id="name" value="{{product.name}}" required  placeholder="Name*"/>
+            <input class="form-control" name="number" id="name" value="{{product.number}}" required  placeholder="Number*"/>
+            <input class="form-control" name="price" id="name" value="{{product.price}}" required  placeholder="Price*"/>
+            <input class="form-control" name="brand" id="name" value="{{product.brand}}" required  placeholder="Brand*"/>
             <br />
             <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
             <a href="/Products" class="btn btn-lg btn-dark btn-block">
