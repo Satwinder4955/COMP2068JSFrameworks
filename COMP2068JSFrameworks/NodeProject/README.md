@@ -32,3 +32,12 @@ When an error occurs, the error handler middleware renders an error page (error.
 
 Conclusion
 In summary, the provided application sets up an Express.js web server, configures middleware for various functionalities, establishes a connection to a MongoDB database, and defines routes for handling different types of requests. It also includes error handling mechanisms to ensure smooth operation and proper response to errors.
+
+
+
+
+
+///////////////////Deployed project link is 
+
+
+https://app.netlify.com/teams/satwinder4955/overview
